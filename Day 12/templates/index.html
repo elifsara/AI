@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaş Tahmin Eden ML Modeli</title>
+</head>
+
+<body>
+    <h1>Maaş Tahmini Yapan Model</h1>
+    <table>
+        <form action="/predict" method="post">
+            <tr>
+                <td>Tecrübe:</td>
+                <td><input type="text" name="tecrube" required></td>
+            </tr>
+            <tr>
+                <td>Yazılı sınav notu:</td>
+                <td><input type="text" name="yazili" required></td>
+            </tr>
+            <tr>
+                <td>Mülakat sınav notu:</td>
+                <td><input type="text" name="mulakat" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <button type="submit">Tahmin Et</button> <button type="reset">Temizle</button> </td>
+            </tr>
+        </form>
+    </table>
+
+    {{tahmin}}
+</body>
+
+</html>
